@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120">
+  <defs>
+    <linearGradient id="goldGradFull" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FCEAB3"/>
+      <stop offset="30%" stop-color="#F5D77F"/>
+      <stop offset="70%" stop-color="#D4AF37"/>
+      <stop offset="100%" stop-color="#8C6B17"/>
+    </linearGradient>
+    <linearGradient id="bgGradFull" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0F243E"/>
+      <stop offset="100%" stop-color="#07121F"/>
+    </linearGradient>
+    <filter id="goldGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+  <!-- Outer Card -->
+  <rect x="4" y="4" width="112" height="112" rx="24" fill="url(#bgGradFull)" stroke="url(#goldGradFull)" stroke-width="3"/>
+  <!-- Inner delicate border -->
+  <rect x="12" y="12" width="96" height="96" rx="18" fill="none" stroke="#D4AF37" stroke-width="1" stroke-opacity="0.35" stroke-dasharray="4 2"/>
+  
+  <!-- Crown/Diamond Emblem Top -->
+  <polygon points="60,20 66,27 60,34 54,27" fill="url(#goldGradFull)"/>
+  <circle cx="43" cy="27" r="2.5" fill="#D4AF37"/>
+  <circle cx="77" cy="27" r="2.5" fill="#D4AF37"/>
+  
+  <!-- Main Monogram JC -->
+  <text x="60" y="70" font-family="'Playfair Display', Georgia, serif" font-size="44" font-weight="700" fill="url(#goldGradFull)" text-anchor="middle" letter-spacing="-2">JC</text>
+  
+  <!-- Enterprise Subtext PM -->
+  <text x="60" y="87" font-family="'Inter', system-ui, sans-serif" font-size="13" font-weight="800" fill="#F8FAFC" text-anchor="middle" letter-spacing="5">PM</text>
+  
+  <!-- Gold Divider Accents -->
+  <path d="M 32 95 Q 60 97 88 95" stroke="url(#goldGradFull)" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <circle cx="60" cy="96" r="2" fill="#F5D77F"/>
+</svg>

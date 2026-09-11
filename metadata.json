@@ -1,0 +1,7 @@
+{
+  "name": "JCPM-Enterprise-Angola",
+  "description": "Premier Asset & Wealth Management firm based in Luanda, Angola - Preservação, Gestão Estratégica e Perpetuação do Seu Património.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
+

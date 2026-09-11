@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F5D77F"/>
+      <stop offset="45%" stop-color="#D4AF37"/>
+      <stop offset="100%" stop-color="#9A7822"/>
+    </linearGradient>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0E223D"/>
+      <stop offset="100%" stop-color="#060E1A"/>
+    </linearGradient>
+  </defs>
+  <!-- Background Shield / Rounded Rect -->
+  <rect x="2" y="2" width="60" height="60" rx="14" fill="url(#bgGrad)" stroke="url(#goldGrad)" stroke-width="2"/>
+  <!-- Inner geometric border -->
+  <rect x="6" y="6" width="52" height="52" rx="10" fill="none" stroke="#D4AF37" stroke-width="0.75" stroke-opacity="0.4"/>
+  <!-- Diamond Crest at Top -->
+  <polygon points="32,10 35,14 32,18 29,14" fill="url(#goldGrad)"/>
+  <!-- Monogram text JC -->
+  <text x="32" y="38" font-family="'Playfair Display', Georgia, serif" font-size="22" font-weight="700" fill="url(#goldGrad)" text-anchor="middle" letter-spacing="-1">JC</text>
+  <!-- Small subtitle PM -->
+  <text x="32" y="47" font-family="'Inter', sans-serif" font-size="7.5" font-weight="800" fill="#F8FAFC" text-anchor="middle" letter-spacing="2.5">PM</text>
+  <!-- Base line accent -->
+  <line x1="20" y1="52" x2="44" y2="52" stroke="url(#goldGrad)" stroke-width="1.2" stroke-linecap="round"/>
+</svg>

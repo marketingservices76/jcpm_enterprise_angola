@@ -1,0 +1,1747 @@
+<!DOCTYPE html>
+<html lang="pt" class="dark scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JCPM-Enterprise-Angola | Asset & Wealth Management em Luanda</title>
+  <meta name="description" content="Preservação, Gestão Estratégica e Perpetuação do Seu Património. Soluções integradas de gestão de fundos, arquitetura patrimonial e planeamento sucessório em Luanda, Angola." />
+  <meta property="og:title" content="JCPM-Enterprise-Angola | Asset & Wealth Management" />
+  <meta property="og:description" content="Preservação, Gestão Estratégica e Perpetuação do Seu Património para famílias e investidores de elevado património em Angola." />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- Favicon / Logo na Aba de Navegação (Browser Tab) -->
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="alternate icon" type="image/svg+xml" href="/logo.svg" />
+  <link rel="apple-touch-icon" href="/logo.svg" />
+
+  <!-- Google Fonts: Inter & Playfair Display -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Lucide Icons via CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Tailwind Custom Configuration for Dark Executive Theme -->
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            navy: {
+              950: '#060D18',
+              900: '#0A192F',
+              850: '#0D1B2A',
+              800: '#112240',
+              750: '#162C52',
+              700: '#1E3A5F',
+              600: '#2C4F7C'
+            },
+            gold: {
+              300: '#F7DF94',
+              400: '#F5D77F',
+              500: '#D4AF37',
+              600: '#C5A059',
+              700: '#A3813B',
+              800: '#755B22',
+              900: '#4D3A11'
+            },
+            bronze: '#C5A059',
+            offwhite: '#F8FAFC',
+            muted: '#94A3B8'
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
+            serif: ['"Playfair Display"', 'Georgia', 'serif']
+          },
+          boxShadow: {
+            'gold-sm': '0 2px 10px rgba(212, 175, 55, 0.15)',
+            'gold-glow': '0 0 25px rgba(212, 175, 55, 0.22)',
+            'card-luxury': '0 12px 32px rgba(2, 12, 27, 0.7), 0 0 0 1px rgba(197, 160, 89, 0.15)',
+            'card-hover': '0 20px 40px rgba(2, 12, 27, 0.85), 0 0 0 1px rgba(212, 175, 55, 0.35)'
+          }
+        }
+      }
+    };
+  </script>
+
+  <style>
+    /* Custom luxury accents */
+    ::selection {
+      background-color: #D4AF37;
+      color: #0A192F;
+    }
+    
+    /* Subtle scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #0A192F;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #1E3A5F;
+      border-radius: 4px;
+      border: 2px solid #0A192F;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #C5A059;
+    }
+
+    /* Ambient background grid */
+    .bg-grid-subtle {
+      background-size: 40px 40px;
+      background-image: 
+        linear-gradient(to right, rgba(197, 160, 89, 0.035) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(197, 160, 89, 0.035) 1px, transparent 1px);
+    }
+  </style>
+</head>
+<body class="bg-navy-900 text-offwhite font-sans antialiased selection:bg-gold-500 selection:text-navy-900 min-h-screen flex flex-col">
+
+  <!-- ========================================================================= -->
+  <!-- 1. HEADER & NAVIGATION (Sticky with Backdrop Blur) -->
+  <!-- ========================================================================= -->
+  <header id="main-header" class="sticky top-0 z-40 w-full bg-navy-900/85 backdrop-blur-xl border-b border-gold-500/20 transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      
+      <!-- Brand Logo -->
+      <a href="#inicio" class="flex items-center gap-3 group focus:outline-none" aria-label="JCPM-Enterprise-Angola Página Inicial">
+        <!-- Logo Oficial na Barra de Navegação -->
+        <div class="w-11 h-11 rounded-lg overflow-hidden border border-gold-500/40 shadow-gold-sm transition-transform group-hover:scale-105 flex items-center justify-center bg-navy-950 shrink-0">
+          <img src="/logo.svg" alt="JCPM Enterprise Angola Logo" class="w-full h-full object-cover" />
+        </div>
+        <div class="flex flex-col">
+          <span class="font-sans font-bold tracking-[0.12em] text-sm sm:text-base text-offwhite group-hover:text-gold-400 transition-colors uppercase">
+            JCPM-ENTERPRISE
+          </span>
+          <div class="flex items-center gap-1.5">
+            <span class="h-0.5 w-3 bg-gold-500 rounded-full"></span>
+            <span class="font-sans text-[10px] tracking-[0.25em] font-semibold text-gold-500 uppercase">
+              ANGOLA
+            </span>
+          </div>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav class="hidden lg:flex items-center gap-8" aria-label="Navegação Principal">
+        <a href="#inicio" class="text-sm font-medium text-offwhite/90 hover:text-gold-400 transition-colors">Início</a>
+        <a href="#sobre" class="text-sm font-medium text-muted hover:text-gold-400 transition-colors">Sobre Nós</a>
+        <a href="#desafio" class="text-sm font-medium text-muted hover:text-gold-400 transition-colors">O Desafio</a>
+        <a href="#servicos" class="text-sm font-medium text-muted hover:text-gold-400 transition-colors">Serviços</a>
+        <a href="#governanca" class="text-sm font-medium text-muted hover:text-gold-400 transition-colors">Governança</a>
+        <a href="#contacto" class="text-sm font-medium text-muted hover:text-gold-400 transition-colors">Contactos</a>
+      </nav>
+
+      <!-- CTA Button & Mobile Menu Trigger -->
+      <div class="flex items-center gap-3">
+        <button 
+          type="button" 
+          onclick="openScheduleModal()"
+          class="hidden sm:inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-lg bg-gradient-to-r from-gold-500 via-gold-400 to-gold-600 text-navy-950 font-semibold text-xs uppercase tracking-wider shadow-gold-sm hover:shadow-gold-glow hover:brightness-105 active:scale-[0.98] transition-all"
+        >
+          <i data-lucide="calendar" class="w-4 h-4"></i>
+          <span>Agendar Sessão Estratégica</span>
+        </button>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button 
+          id="mobile-menu-btn"
+          type="button"
+          onclick="toggleMobileMenu()" 
+          aria-label="Abrir Menu de Navegação"
+          class="lg:hidden p-2 rounded-lg text-offwhite hover:text-gold-400 hover:bg-navy-800 focus:outline-none transition-colors"
+        >
+          <i id="menu-icon-bars" data-lucide="menu" class="w-6 h-6"></i>
+          <i id="menu-icon-close" data-lucide="x" class="w-6 h-6 hidden"></i>
+        </button>
+      </div>
+
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobile-menu" class="hidden lg:hidden border-b border-gold-500/20 bg-navy-950/98 backdrop-blur-2xl transition-all duration-300">
+      <div class="px-6 pt-4 pb-8 space-y-4">
+        <nav class="flex flex-col space-y-3" aria-label="Menu Mobile">
+          <a href="#inicio" onclick="closeMobileMenu()" class="text-base font-medium text-offwhite hover:text-gold-400 py-2 border-b border-navy-800">Início</a>
+          <a href="#sobre" onclick="closeMobileMenu()" class="text-base font-medium text-muted hover:text-gold-400 py-2 border-b border-navy-800">Sobre Nós</a>
+          <a href="#desafio" onclick="closeMobileMenu()" class="text-base font-medium text-muted hover:text-gold-400 py-2 border-b border-navy-800">O Desafio</a>
+          <a href="#servicos" onclick="closeMobileMenu()" class="text-base font-medium text-muted hover:text-gold-400 py-2 border-b border-navy-800">Serviços</a>
+          <a href="#governanca" onclick="closeMobileMenu()" class="text-base font-medium text-muted hover:text-gold-400 py-2 border-b border-navy-800">Governança</a>
+          <a href="#contacto" onclick="closeMobileMenu()" class="text-base font-medium text-muted hover:text-gold-400 py-2 border-b border-navy-800">Contactos</a>
+        </nav>
+
+        <div class="pt-2 flex flex-col gap-3">
+          <button 
+            type="button" 
+            onclick="closeMobileMenu(); openScheduleModal();"
+            class="w-full py-3 px-4 rounded-lg bg-gradient-to-r from-gold-500 to-gold-600 text-navy-950 font-semibold text-sm uppercase tracking-wider flex items-center justify-center gap-2 shadow-gold-sm"
+          >
+            <i data-lucide="calendar" class="w-4 h-4"></i>
+            <span>Agendar Sessão Estratégica</span>
+          </button>
+          <div class="flex flex-col gap-1.5 text-xs text-muted pt-2 border-t border-navy-850">
+            <div class="flex items-center justify-between">
+              <span>Telefone Principal:</span>
+              <a href="tel:+244942783898" class="text-gold-400 font-medium hover:underline">+244 942 783 898</a>
+            </div>
+            <div class="flex items-center justify-between">
+              <span>Correio Eletrónico:</span>
+              <a href="mailto:jcpm.enterpriseangola@gmail.com" class="text-gold-400 font-medium hover:underline">jcpm.enterpriseangola@gmail.com</a>
+            </div>
+            <div class="text-[11px] text-muted/80 pt-1">
+              Zango 0, Edificio do Kibabo, Piso 02, Área B, Ap. 05, Luanda
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+  <!-- ========================================================================= -->
+  <!-- 2. HERO SECTION -->
+  <!-- ========================================================================= -->
+  <section id="inicio" class="relative bg-navy-900 bg-grid-subtle overflow-hidden pt-12 pb-20 sm:pt-20 sm:pb-28">
+    <!-- Ambient Radial Glows -->
+    <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[350px] bg-gold-500/10 rounded-full blur-[120px] pointer-events-none"></div>
+    <div class="absolute -top-32 right-10 w-96 h-96 bg-navy-700/30 rounded-full blur-[100px] pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      
+      <!-- Tagline Badge -->
+      <div class="flex items-center justify-start mb-6">
+        <div class="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-navy-800/90 border border-gold-500/30 shadow-gold-sm">
+          <span class="w-2 h-2 rounded-full bg-gold-500 animate-ping"></span>
+          <span class="text-xs font-semibold tracking-wider uppercase text-gold-400">
+            Asset &amp; Wealth Management em Angola
+          </span>
+        </div>
+      </div>
+
+      <!-- Main Headline & Subheadline -->
+      <div class="max-w-4xl">
+        <h1 class="font-serif text-3xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-offwhite leading-[1.15] mb-6">
+          Preservação, Gestão Estratégica e 
+          <span class="italic bg-gradient-to-r from-gold-300 via-gold-500 to-gold-600 bg-clip-text text-transparent">
+            Perpetuação do Seu Património
+          </span>
+        </h1>
+        <p class="text-lg sm:text-xl text-muted font-light leading-relaxed max-w-3xl mb-10">
+          Soluções integradas de gestão de fundos, arquitetura patrimonial e planeamento sucessório para famílias e investidores de elevado património em Angola.
+        </p>
+
+        <!-- Action Buttons -->
+        <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 sm:gap-5 mb-14">
+          <a 
+            href="#servicos" 
+            class="inline-flex items-center justify-center gap-2.5 px-7 py-3.5 rounded-lg bg-navy-800 hover:bg-navy-750 text-offwhite font-medium text-sm tracking-wide border border-gold-500/40 hover:border-gold-500 shadow-sm transition-all"
+          >
+            <span>Conhecer Serviços</span>
+            <i data-lucide="arrow-down" class="w-4 h-4 text-gold-400"></i>
+          </a>
+          <button 
+            type="button" 
+            onclick="openScheduleModal()"
+            class="inline-flex items-center justify-center gap-2.5 px-7 py-3.5 rounded-lg bg-gradient-to-r from-gold-500 via-gold-400 to-gold-600 text-navy-950 font-bold text-sm tracking-wider uppercase shadow-gold-sm hover:shadow-gold-glow hover:brightness-105 active:scale-[0.98] transition-all"
+          >
+            <i data-lucide="phone-call" class="w-4 h-4"></i>
+            <span>Falar com um Consultor</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Key Value Pillars (Trust Badges Grid) -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 pt-6 border-t border-navy-800">
+        
+        <!-- Pillar 1 -->
+        <div class="p-5 rounded-xl bg-navy-850/80 border border-gold-500/15 hover:border-gold-500/35 transition-all flex flex-col justify-between">
+          <div class="w-10 h-10 rounded-lg bg-navy-800 flex items-center justify-center text-gold-500 mb-3 border border-gold-500/20">
+            <i data-lucide="trending-up" class="w-5 h-5"></i>
+          </div>
+          <div>
+            <h3 class="font-semibold text-sm text-offwhite mb-1">Gestão Discricionária &amp; Consultiva</h3>
+            <p class="text-xs text-muted leading-relaxed">Alocação estratégica de ativos e fundos com foco intransigente em perfil de risco e liquidez.</p>
+          </div>
+        </div>
+
+        <!-- Pillar 2 -->
+        <div class="p-5 rounded-xl bg-navy-850/80 border border-gold-500/15 hover:border-gold-500/35 transition-all flex flex-col justify-between">
+          <div class="w-10 h-10 rounded-lg bg-navy-800 flex items-center justify-center text-gold-500 mb-3 border border-gold-500/20">
+            <i data-lucide="shield-check" class="w-5 h-5"></i>
+          </div>
+          <div>
+            <h3 class="font-semibold text-sm text-offwhite mb-1">Dever Fiduciário &amp; Ética</h3>
+            <p class="text-xs text-muted leading-relaxed">Independência inegociável, colocando sempre o melhor interesse da família e do cliente em 1º lugar.</p>
+          </div>
+        </div>
+
+        <!-- Pillar 3 -->
+        <div class="p-5 rounded-xl bg-navy-850/80 border border-gold-500/15 hover:border-gold-500/35 transition-all flex flex-col justify-between">
+          <div class="w-10 h-10 rounded-lg bg-navy-800 flex items-center justify-center text-gold-500 mb-3 border border-gold-500/20">
+            <i data-lucide="landmark" class="w-5 h-5"></i>
+          </div>
+          <div>
+            <h3 class="font-semibold text-sm text-offwhite mb-1">Governança &amp; Family Office</h3>
+            <p class="text-xs text-muted leading-relaxed">Estruturação de holdings familiares, protocolos de governança e preparação de novas gerações.</p>
+          </div>
+        </div>
+
+        <!-- Pillar 4 -->
+        <div class="p-5 rounded-xl bg-navy-850/80 border border-gold-500/15 hover:border-gold-500/35 transition-all flex flex-col justify-between">
+          <div class="w-10 h-10 rounded-lg bg-navy-800 flex items-center justify-center text-gold-500 mb-3 border border-gold-500/20">
+            <i data-lucide="lock" class="w-5 h-5"></i>
+          </div>
+          <div>
+            <h3 class="font-semibold text-sm text-offwhite mb-1">Confidencialidade Absoluta</h3>
+            <p class="text-xs text-muted leading-relaxed">Salvaguarda estrita dos dados patrimoniais sob as mais elevadas práticas de sigilo institucional.</p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Institutional Micro-Banner -->
+      <div class="mt-10 p-4 rounded-lg bg-navy-800/50 border border-navy-750 flex flex-wrap items-center justify-between gap-4 text-xs text-muted">
+        <div class="flex items-center gap-2">
+          <i data-lucide="map-pin" class="w-4 h-4 text-gold-500"></i>
+          <span class="text-offwhite font-medium">Sede Estratégica:</span> Zango 0, Edifício do Kibabo, Luanda
+        </div>
+        <div class="flex items-center gap-2">
+          <i data-lucide="mail" class="w-4 h-4 text-gold-500"></i>
+          <a href="mailto:jcpm.enterpriseangola@gmail.com" class="text-offwhite hover:text-gold-400 font-medium transition-colors">jcpm.enterpriseangola@gmail.com</a>
+        </div>
+        <div class="flex items-center gap-2">
+          <i data-lucide="coins" class="w-4 h-4 text-gold-500"></i>
+          <span class="text-offwhite font-medium">Capacidades Cambiais:</span> Alocação Multimoeda (AOA • USD • EUR)
+        </div>
+        <div class="flex items-center gap-2">
+          <i data-lucide="award" class="w-4 h-4 text-gold-500"></i>
+          <span class="text-offwhite font-medium">Modelo Fiduciário:</span> 100% Alinhado
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ========================================================================= -->
+  <!-- ABOUT US SUMMARY (SOBRE NÓS) -->
+  <!-- ========================================================================= -->
+  <section id="sobre" class="py-20 bg-navy-850 border-t border-navy-800 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <div class="lg:col-span-6 space-y-6">
+          <div class="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-widest text-gold-400">
+            <span class="w-6 h-px bg-gold-500"></span>
+            <span>Quem Somos</span>
+          </div>
+          
+          <h2 class="font-serif text-3xl sm:text-4xl font-bold text-offwhite leading-tight">
+            Excelência Fiduciária e Soberania na Gestão de Patrimónios em Angola
+          </h2>
+
+          <p class="text-muted leading-relaxed text-sm sm:text-base">
+            A <strong class="text-offwhite font-semibold">JCPM-Enterprise-Angola</strong> nasceu para atender à demanda de investidores institucionais, famílias empresariais e indivíduos de património ultra-elevado (UHNWIs) que exigem rigor de nível suíço combinado com um profundo entendimento prático das dinâmicas económicas de Angola.
+          </p>
+
+          <p class="text-muted leading-relaxed text-sm sm:text-base">
+            Não atuamos como intermediários transacionais: assumimos a posição de gestores e arquitetos patrimoniais dedicados à longevidade, eficiência fiscal e sucessão pacífica dos bens da sua linhagem.
+          </p>
+
+          <div class="grid grid-cols-2 gap-4 pt-2">
+            <div class="p-4 rounded-lg bg-navy-800 border border-gold-500/15">
+              <div class="text-2xl sm:text-3xl font-serif font-bold text-gold-400 mb-1">+15 Anos</div>
+              <div class="text-xs text-muted">Experiência combinada no setor financeiro e jurídico angolano</div>
+            </div>
+            <div class="p-4 rounded-lg bg-navy-800 border border-gold-500/15">
+              <div class="text-2xl sm:text-3xl font-serif font-bold text-gold-400 mb-1">100%</div>
+              <div class="text-xs text-muted">Foco Fiduciário sem conflito de interesses na alocação</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="lg:col-span-6">
+          <!-- Institutional Architecture Box -->
+          <div class="rounded-2xl bg-navy-800 p-8 border border-gold-500/25 shadow-card-luxury relative overflow-hidden">
+            <div class="absolute -right-12 -bottom-12 w-48 h-48 bg-gold-500/10 rounded-full blur-3xl pointer-events-none"></div>
+
+            <div class="flex items-center justify-between pb-6 border-b border-navy-700">
+              <span class="text-xs font-semibold uppercase tracking-widest text-gold-400">Pilares Fundamentais</span>
+              <span class="text-xs text-muted font-mono">LUANDA • AO</span>
+            </div>
+
+            <div class="divide-y divide-navy-700/60">
+              <div class="py-4 flex items-start gap-4">
+                <div class="w-8 h-8 rounded-full bg-gold-500/10 text-gold-400 flex items-center justify-center shrink-0 mt-0.5">
+                  <i data-lucide="check" class="w-4 h-4"></i>
+                </div>
+                <div>
+                  <h4 class="font-semibold text-sm text-offwhite mb-0.5">Proteção do Poder de Compra Real</h4>
+                  <p class="text-xs text-muted">Construção de portfólios resilientes a ciclos inflacionários e flutuações cambiais severas.</p>
+                </div>
+              </div>
+
+              <div class="py-4 flex items-start gap-4">
+                <div class="w-8 h-8 rounded-full bg-gold-500/10 text-gold-400 flex items-center justify-center shrink-0 mt-0.5">
+                  <i data-lucide="check" class="w-4 h-4"></i>
+                </div>
+                <div>
+                  <h4 class="font-semibold text-sm text-offwhite mb-0.5">Segurança Jurídica &amp; Blindagem Societária</h4>
+                  <p class="text-xs text-muted">Criação de estruturas contratuais e societárias em estrita observância com o ordenamento jurídico de Angola.</p>
+                </div>
+              </div>
+
+              <div class="py-4 flex items-start gap-4">
+                <div class="w-8 h-8 rounded-full bg-gold-500/10 text-gold-400 flex items-center justify-center shrink-0 mt-0.5">
+                  <i data-lucide="check" class="w-4 h-4"></i>
+                </div>
+                <div>
+                  <h4 class="font-semibold text-sm text-offwhite mb-0.5">União Familiar e Sucessão Harmoniosa</h4>
+                  <p class="text-xs text-muted">Treinamento dos herdeiros e consolidação do conselho de família para preservar a coesão intergeracional.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="mt-6 pt-5 border-t border-navy-700 flex items-center justify-between">
+              <div class="flex items-center gap-2 text-xs text-gold-400">
+                <i data-lucide="shield" class="w-4 h-4"></i>
+                <span>Sigilo e Discrição Garantidos</span>
+              </div>
+              <button 
+                onclick="openScheduleModal()"
+                class="text-xs font-semibold text-offwhite hover:text-gold-400 underline underline-offset-4 transition-colors"
+              >
+                Saber Mais &rarr;
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ========================================================================= -->
+  <!-- 3. MARKET CHALLENGE SECTION (O Problema que Resolvemos) -->
+  <!-- ========================================================================= -->
+  <section id="desafio" class="py-20 bg-navy-900 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Header -->
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <div class="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-widest text-gold-400 mb-3">
+          <span class="w-4 h-px bg-gold-500"></span>
+          <span>O Problema que Resolvemos</span>
+          <span class="w-4 h-px bg-gold-500"></span>
+        </div>
+        <h2 class="font-serif text-3xl sm:text-4xl font-bold text-offwhite mb-6">
+          Desafios Críticos para Famílias de Alto Património em Angola
+        </h2>
+        <!-- High-Impact Target HNWI Quote Box -->
+        <div class="p-6 rounded-xl bg-navy-800/80 border border-gold-500/30 shadow-card-luxury text-left sm:text-center">
+          <p class="text-base sm:text-lg text-offwhite font-medium italic leading-relaxed">
+            “Possui um património relevante, mas carece de uma estrutura profissional para protegê-lo, rentabilizá-lo e transmiti-lo às próximas gerações?”
+          </p>
+          <span class="block mt-2 text-xs text-gold-400 uppercase tracking-widest font-semibold">
+            — A Realidade de 80% das Fortunas Familiares Não Estruturadas
+          </span>
+        </div>
+      </div>
+
+      <!-- 3 Solution Cards with Gold Icons -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        
+        <!-- Card 1: Ausência de Governança -->
+        <div class="rounded-2xl bg-navy-800 p-8 border border-gold-500/20 hover:border-gold-500/50 shadow-card-luxury hover:shadow-card-hover transition-all duration-300 flex flex-col justify-between group">
+          <div>
+            <!-- Gold Icon -->
+            <div class="w-14 h-14 rounded-xl bg-navy-750 border border-gold-500/30 flex items-center justify-center text-gold-500 mb-6 group-hover:scale-110 transition-transform">
+              <i data-lucide="layers" class="w-7 h-7"></i>
+            </div>
+            
+            <div class="text-xs font-semibold text-gold-400 uppercase tracking-wider mb-2">
+              Desafio Estrutural 01
+            </div>
+            <h3 class="font-serif text-xl font-bold text-offwhite mb-3">
+              Ausência de Governança
+            </h3>
+            
+            <div class="p-3 rounded-lg bg-navy-850/80 border-l-2 border-gold-500 text-xs text-muted mb-4">
+              <strong class="text-offwhite block mb-1">A Solução JCPM:</strong>
+              Estruturação de Holdings e Governança Familiar.
+            </div>
+
+            <p class="text-sm text-muted leading-relaxed">
+              Eliminamos a sobreposição entre as decisões operacionais dos negócios e a salvaguarda do património pessoal. Criamos conselhos de família, estatutos de holding e regulamentos claros para profissionalizar a tomada de decisões de investimento.
+            </p>
+          </div>
+
+          <div class="pt-6 mt-6 border-t border-navy-700 flex items-center justify-between text-xs text-gold-400">
+            <span>Blindagem Institucional</span>
+            <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
+          </div>
+        </div>
+
+        <!-- Card 2: Ineficiência na Alocação -->
+        <div class="rounded-2xl bg-navy-800 p-8 border border-gold-500/20 hover:border-gold-500/50 shadow-card-luxury hover:shadow-card-hover transition-all duration-300 flex flex-col justify-between group">
+          <div>
+            <!-- Gold Icon -->
+            <div class="w-14 h-14 rounded-xl bg-navy-750 border border-gold-500/30 flex items-center justify-center text-gold-500 mb-6 group-hover:scale-110 transition-transform">
+              <i data-lucide="pie-chart" class="w-7 h-7"></i>
+            </div>
+            
+            <div class="text-xs font-semibold text-gold-400 uppercase tracking-wider mb-2">
+              Desafio Estrutural 02
+            </div>
+            <h3 class="font-serif text-xl font-bold text-offwhite mb-3">
+              Ineficiência na Alocação
+            </h3>
+
+            <div class="p-3 rounded-lg bg-navy-850/80 border-l-2 border-gold-500 text-xs text-muted mb-4">
+              <strong class="text-offwhite block mb-1">A Solução JCPM:</strong>
+              Gestão Científica de Ativos e Fundos de Investimento.
+            </div>
+
+            <p class="text-sm text-muted leading-relaxed">
+              Superamos a concentração excessiva de risco e a erosão cambial através de modelos de alocação de ativos baseados em dados, títulos soberanos de alta liquidez, ativos em moeda estrangeira e fundos desenhados para proteger o poder de compra real.
+            </p>
+          </div>
+
+          <div class="pt-6 mt-6 border-t border-navy-700 flex items-center justify-between text-xs text-gold-400">
+            <span>Otimização de Risco &amp; Retorno</span>
+            <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
+          </div>
+        </div>
+
+        <!-- Card 3: Risco de Conflito Sucessório -->
+        <div class="rounded-2xl bg-navy-800 p-8 border border-gold-500/20 hover:border-gold-500/50 shadow-card-luxury hover:shadow-card-hover transition-all duration-300 flex flex-col justify-between group">
+          <div>
+            <!-- Gold Icon -->
+            <div class="w-14 h-14 rounded-xl bg-navy-750 border border-gold-500/30 flex items-center justify-center text-gold-500 mb-6 group-hover:scale-110 transition-transform">
+              <i data-lucide="users" class="w-7 h-7"></i>
+            </div>
+            
+            <div class="text-xs font-semibold text-gold-400 uppercase tracking-wider mb-2">
+              Desafio Estrutural 03
+            </div>
+            <h3 class="font-serif text-xl font-bold text-offwhite mb-3">
+              Risco de Conflito Sucessório
+            </h3>
+
+            <div class="p-3 rounded-lg bg-navy-850/80 border-l-2 border-gold-500 text-xs text-muted mb-4">
+              <strong class="text-offwhite block mb-1">A Solução JCPM:</strong>
+              Planeamento Sucessório e Formação de Herdeiros.
+            </div>
+
+            <p class="text-sm text-muted leading-relaxed">
+              Evitamos a desintegração de legados construídos ao longo de décadas. Estruturamos protocolos intergeracionais, pactos sucessórios legais e programas de educação financeira executiva para capacitar os sucessores antes da transição.
+            </p>
+          </div>
+
+          <div class="pt-6 mt-6 border-t border-navy-700 flex items-center justify-between text-xs text-gold-400">
+            <span>Perpetuação Sem Litígios</span>
+            <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ========================================================================= -->
+  <!-- 4. CORE SERVICES SECTION (Interactive Tabs) -->
+  <!-- ========================================================================= -->
+  <section id="servicos" class="py-20 bg-navy-850 border-t border-navy-800 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Heading -->
+      <div class="text-center max-w-3xl mx-auto mb-12">
+        <div class="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-widest text-gold-400 mb-3">
+          <span class="w-4 h-px bg-gold-500"></span>
+          <span>Nossos Serviços Especializados</span>
+          <span class="w-4 h-px bg-gold-500"></span>
+        </div>
+        <h2 class="font-serif text-3xl sm:text-4xl font-bold text-offwhite mb-4">
+          Arquitetura Financeira e Soluções Fiduciárias
+        </h2>
+        <p class="text-muted text-sm sm:text-base">
+          Abordagem multidisciplinar estruturada para responder aos requisitos mais sofisticados de gestão patrimonial e governança familiar.
+        </p>
+      </div>
+
+      <!-- Tab Buttons Navigation -->
+      <div class="flex flex-wrap items-center justify-center gap-2 p-1.5 bg-navy-900/90 rounded-xl border border-gold-500/20 max-w-3xl mx-auto mb-10 shadow-lg" role="tablist">
+        
+        <button 
+          id="tab-btn-0"
+          type="button" 
+          role="tab"
+          aria-selected="true"
+          aria-controls="tab-content-0"
+          onclick="switchTab(0)"
+          class="flex-1 min-w-[200px] py-3 px-4 rounded-lg text-xs sm:text-sm font-semibold uppercase tracking-wider transition-all duration-200 flex items-center justify-center gap-2 bg-gradient-to-r from-gold-500 to-gold-600 text-navy-950 shadow-gold-sm"
+        >
+          <i data-lucide="line-chart" class="w-4 h-4"></i>
+          <span>Asset Management</span>
+        </button>
+
+        <button 
+          id="tab-btn-1"
+          type="button" 
+          role="tab"
+          aria-selected="false"
+          aria-controls="tab-content-1"
+          onclick="switchTab(1)"
+          class="flex-1 min-w-[200px] py-3 px-4 rounded-lg text-xs sm:text-sm font-semibold uppercase tracking-wider transition-all duration-200 flex items-center justify-center gap-2 text-muted hover:text-offwhite hover:bg-navy-800"
+        >
+          <i data-lucide="shield" class="w-4 h-4"></i>
+          <span>Wealth &amp; Family Office</span>
+        </button>
+
+        <button 
+          id="tab-btn-2"
+          type="button" 
+          role="tab"
+          aria-selected="false"
+          aria-controls="tab-content-2"
+          onclick="switchTab(2)"
+          class="flex-1 min-w-[200px] py-3 px-4 rounded-lg text-xs sm:text-sm font-semibold uppercase tracking-wider transition-all duration-200 flex items-center justify-center gap-2 text-muted hover:text-offwhite hover:bg-navy-800"
+        >
+          <i data-lucide="scale" class="w-4 h-4"></i>
+          <span>Planeamento Sucessório</span>
+        </button>
+
+      </div>
+
+      <!-- Tab Content Panels Container -->
+      <div class="relative bg-navy-800 rounded-2xl border border-gold-500/25 p-6 sm:p-10 shadow-card-luxury">
+        
+        <!-- ==================== TAB 1: Asset Management ==================== -->
+        <div id="tab-content-0" class="tab-panel block" role="tabpanel">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+            
+            <div class="lg:col-span-7 space-y-5">
+              <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-navy-750 text-gold-400 text-xs font-semibold uppercase tracking-wider border border-gold-500/20">
+                <i data-lucide="trending-up" class="w-3.5 h-3.5"></i>
+                <span>Gestão de Ativos &amp; Fundos</span>
+              </div>
+              <h3 class="font-serif text-2xl sm:text-3xl font-bold text-offwhite">
+                Gestão Discricionária e Consultiva de Carteiras
+              </h3>
+              <p class="text-muted leading-relaxed text-sm sm:text-base">
+                Desenvolvemos estratégias de alocação de ativos com disciplina científica, adaptadas aos mandatos individuais de risco, horizonte temporal e requisitos de liquidez de cada investidor.
+              </p>
+
+              <div class="space-y-3 pt-2">
+                <div class="flex items-start gap-3">
+                  <div class="w-6 h-6 rounded-full bg-gold-500/20 text-gold-400 flex items-center justify-center shrink-0 mt-0.5">
+                    <i data-lucide="check" class="w-3.5 h-3.5"></i>
+                  </div>
+                  <div class="text-sm text-offwhite">
+                    <strong class="font-semibold">Perfil de Risco e Liquidez Rigoroso:</strong> Definição de bandas de volatilidade e preservação de capital garantindo liquidez quando necessária.
+                  </div>
+                </div>
+
+                <div class="flex items-start gap-3">
+                  <div class="w-6 h-6 rounded-full bg-gold-500/20 text-gold-400 flex items-center justify-center shrink-0 mt-0.5">
+                    <i data-lucide="check" class="w-3.5 h-3.5"></i>
+                  </div>
+                  <div class="text-sm text-offwhite">
+                    <strong class="font-semibold">Análise Quantitativa e Qualitativa Contínua:</strong> Acompanhamento permanente das taxas diretoras, inflação, títulos soberanos e mercado de dívida.
+                  </div>
+                </div>
+
+                <div class="flex items-start gap-3">
+                  <div class="w-6 h-6 rounded-full bg-gold-500/20 text-gold-400 flex items-center justify-center shrink-0 mt-0.5">
+                    <i data-lucide="check" class="w-3.5 h-3.5"></i>
+                  </div>
+                  <div class="text-sm text-offwhite">
+                    <strong class="font-semibold">Gestão Cambial Dinâmica:</strong> Otimização da exposição cambial (AOA, USD, EUR) para salvaguarda do valor do portfólio.
+                  </div>
+                </div>
+              </div>
+
+              <div class="pt-4">
+                <button 
+                  onclick="openScheduleModal()"
+                  class="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-navy-700 hover:bg-navy-600 text-offwhite text-xs uppercase font-semibold tracking-wider border border-gold-500/40 hover:border-gold-400 transition-all"
+                >
+                  <i data-lucide="file-text" class="w-4 h-4 text-gold-400"></i>
+                  <span>Solicitar Diagnóstico de Carteira</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Asset Management Visual Metric Card -->
+            <div class="lg:col-span-5">
+              <div class="p-6 rounded-xl bg-navy-850 border border-gold-500/20 space-y-5">
+                <div class="flex items-center justify-between border-b border-navy-750 pb-3">
+                  <span class="text-xs font-semibold uppercase tracking-wider text-muted">Exemplo de Matriz de Alocação</span>
+                  <span class="text-xs text-gold-400 font-mono">Multimoeda</span>
+                </div>
+
+                <!-- Allocation breakdown simulation -->
+                <div class="space-y-4">
+                  <div>
+                    <div class="flex justify-between text-xs mb-1">
+                      <span class="text-offwhite font-medium">Títulos do Tesouro &amp; Obrigações</span>
+                      <span class="text-gold-400 font-semibold font-mono">50%</span>
+                    </div>
+                    <div class="w-full h-2 bg-navy-750 rounded-full overflow-hidden">
+                      <div class="h-full bg-gold-500 rounded-full" style="width: 50%"></div>
+                    </div>
+                  </div>
+
+                  <div>
+                    <div class="flex justify-between text-xs mb-1">
+                      <span class="text-offwhite font-medium">Ativos Denominados em Moeda Forte (USD/EUR)</span>
+                      <span class="text-gold-400 font-semibold font-mono">30%</span>
+                    </div>
+                    <div class="w-full h-2 bg-navy-750 rounded-full overflow-hidden">
+                      <div class="h-full bg-gold-400 rounded-full" style="width: 30%"></div>
+                    </div>
+                  </div>
+
+                  <div>
+                    <div class="flex justify-between text-xs mb-1">
+                      <span class="text-offwhite font-medium">Fundos Estruturados &amp; Private Equity</span>
+                      <span class="text-gold-400 font-semibold font-mono">15%</span>
+                    </div>
+                    <div class="w-full h-2 bg-navy-750 rounded-full overflow-hidden">
+                      <div class="h-full bg-gold-600 rounded-full" style="width: 15%"></div>
+                    </div>
+                  </div>
+
+                  <div>
+                    <div class="flex justify-between text-xs mb-1">
+                      <span class="text-offwhite font-medium">Reserva Estratégica de Liquidez Imediata</span>
+                      <span class="text-gold-400 font-semibold font-mono">5%</span>
+                    </div>
+                    <div class="w-full h-2 bg-navy-750 rounded-full overflow-hidden">
+                      <div class="h-full bg-slate-400 rounded-full" style="width: 5%"></div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="p-3 rounded-lg bg-navy-800/80 border border-navy-700 flex items-center gap-3 text-xs text-muted">
+                  <i data-lucide="info" class="w-4 h-4 text-gold-500 shrink-0"></i>
+                  <span>Alocações parametrizadas sob mandatos fiduciários personalizados para cada cliente.</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- ==================== TAB 2: Wealth Management & Family Office ==================== -->
+        <div id="tab-content-1" class="tab-panel hidden" role="tabpanel">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+            
+            <div class="lg:col-span-7 space-y-5">
+              <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-navy-750 text-gold-400 text-xs font-semibold uppercase tracking-wider border border-gold-500/20">
+                <i data-lucide="building" class="w-3.5 h-3.5"></i>
+                <span>Gestão Global de Fortunas</span>
+              </div>
+              <h3 class="font-serif text-2xl sm:text-3xl font-bold text-offwhite">
+                Wealth Management &amp; Multi-Family Office
+              </h3>
+              <p class="text-muted leading-relaxed text-sm sm:text-base">
+                Proporcionamos uma supervisão holística e integrada de todos os ativos patrimoniais — incluindo participações empresariais, imobiliário nobre e contas bancárias locais e transfronteiriças.
+              </p>
+
+              <div class="space-y-3 pt-2">
+                <div class="flex items-start gap-3">
+                  <div class="w-6 h-6 rounded-full bg-gold-500/20 text-gold-400 flex items-center justify-center shrink-0 mt-0.5">
+                    <i data-lucide="check" class="w-3.5 h-3.5"></i>
+                  </div>
+                  <div class="text-sm text-offwhite">
+                    <strong class="font-semibold">Consolidação Patrimonial Global:</strong> Visão clara de 360° em relatórios mensais agregados com avaliação justa de ativos tangíveis e intangíveis.
+                  </div>
+                </div>
+
+                <div class="flex items-start gap-3">
+                  <div class="w-6 h-6 rounded-full bg-gold-500/20 text-gold-400 flex items-center justify-center shrink-0 mt-0.5">
+                    <i data-lucide="check" class="w-3.5 h-3.5"></i>
+                  </div>
+                  <div class="text-sm text-offwhite">
+                    <strong class="font-semibold">Governança Familiar &amp; Protocolos:</strong> Instituição de conselhos familiares, redação de códigos de conduta e acordos societários.
+                  </div>
+                </div>
+
+                <div class="flex items-start gap-3">
+                  <div class="w-6 h-6 rounded-full bg-gold-500/20 text-gold-400 flex items-center justify-center shrink-0 mt-0.5">
+                    <i data-lucide="check" class="w-3.5 h-3.5"></i>
+                  </div>
+                  <div class="text-sm text-offwhite">
+                    <strong class="font-semibold">Educação Financeira para Sucessores:</strong> Programas personalizados para preparar os herdeiros para a responsabilidade e valor do património.
+                  </div>
+                </div>
+              </div>
+
+              <div class="pt-4">
+                <button 
+                  onclick="openScheduleModal()"
+                  class="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-navy-700 hover:bg-navy-600 text-offwhite text-xs uppercase font-semibold tracking-wider border border-gold-500/40 hover:border-gold-400 transition-all"
+                >
+                  <i data-lucide="briefcase" class="w-4 h-4 text-gold-400"></i>
+                  <span>Consultar Soluções de Family Office</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Wealth Management Diagram Card -->
+            <div class="lg:col-span-5">
+              <div class="p-6 rounded-xl bg-navy-850 border border-gold-500/20 space-y-4 text-center">
+                <div class="text-xs font-semibold uppercase tracking-wider text-gold-400 mb-2">
+                  Ecossistema Family Office
+                </div>
+
+                <div class="p-4 rounded-lg bg-navy-800 border border-navy-700">
+                  <div class="text-sm font-semibold text-offwhite">Família &amp; Patriarca/Matriarca</div>
+                  <div class="text-xs text-muted">Valores • Visão • Diretrizes Centrais</div>
+                </div>
+
+                <div class="w-0.5 h-5 bg-gold-500/50 mx-auto"></div>
+
+                <div class="p-4 rounded-lg bg-gradient-to-br from-navy-750 to-navy-800 border border-gold-500/30">
+                  <div class="text-sm font-bold text-gold-400">JCPM-Enterprise-Angola</div>
+                  <div class="text-xs text-offwhite font-medium">Secretariado Patrimonial &amp; Gestão Fiduciária</div>
+                </div>
+
+                <div class="grid grid-cols-3 gap-2 pt-2">
+                  <div class="p-2.5 rounded bg-navy-800 text-[11px] text-muted border border-navy-700">
+                    <span class="block text-offwhite font-semibold mb-0.5">Holdings</span>
+                    Societárias
+                  </div>
+                  <div class="p-2.5 rounded bg-navy-800 text-[11px] text-muted border border-navy-700">
+                    <span class="block text-offwhite font-semibold mb-0.5">Portfólios</span>
+                    Financeiros
+                  </div>
+                  <div class="p-2.5 rounded bg-navy-800 text-[11px] text-muted border border-navy-700">
+                    <span class="block text-offwhite font-semibold mb-0.5">Ativos</span>
+                    Imobiliários
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- ==================== TAB 3: Planeamento Sucessório & Estruturação Jurídica ==================== -->
+        <div id="tab-content-2" class="tab-panel hidden" role="tabpanel">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+            
+            <div class="lg:col-span-7 space-y-5">
+              <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-navy-750 text-gold-400 text-xs font-semibold uppercase tracking-wider border border-gold-500/20">
+                <i data-lucide="shield-alert" class="w-3.5 h-3.5"></i>
+                <span>Segurança Jurídica &amp; Blindagem</span>
+              </div>
+              <h3 class="font-serif text-2xl sm:text-3xl font-bold text-offwhite">
+                Planeamento Sucessório &amp; Estruturação Jurídica
+              </h3>
+              <p class="text-muted leading-relaxed text-sm sm:text-base">
+                Proteção legal integral de bens familiares, desenho de veículos societários dedicados e transição ordenada com total conformidade com a legislação angolana.
+              </p>
+
+              <div class="space-y-3 pt-2">
+                <div class="flex items-start gap-3">
+                  <div class="w-6 h-6 rounded-full bg-gold-500/20 text-gold-400 flex items-center justify-center shrink-0 mt-0.5">
+                    <i data-lucide="check" class="w-3.5 h-3.5"></i>
+                  </div>
+                  <div class="text-sm text-offwhite">
+                    <strong class="font-semibold">Constituição de Holdings Familiares:</strong> Centralização da titularidade de quotas e ações para facilidade de administração e transmissão.
+                  </div>
+                </div>
+
+                <div class="flex items-start gap-3">
+                  <div class="w-6 h-6 rounded-full bg-gold-500/20 text-gold-400 flex items-center justify-center shrink-0 mt-0.5">
+                    <i data-lucide="check" class="w-3.5 h-3.5"></i>
+                  </div>
+                  <div class="text-sm text-offwhite">
+                    <strong class="font-semibold">Transição Segura e Prevenção de Litígios:</strong> Cláusulas de inalienabilidade, incomunicabilidade, reserva de usufruto vitalício e pactos sucessórios.
+                  </div>
+                </div>
+
+                <div class="flex items-start gap-3">
+                  <div class="w-6 h-6 rounded-full bg-gold-500/20 text-gold-400 flex items-center justify-center shrink-0 mt-0.5">
+                    <i data-lucide="check" class="w-3.5 h-3.5"></i>
+                  </div>
+                  <div class="text-sm text-offwhite">
+                    <strong class="font-semibold">Eficiência Tributária em Estrita Conformidade:</strong> Otimização de custos de transmissão e inventário dentro dos marcos legais de Angola.
+                  </div>
+                </div>
+              </div>
+
+              <div class="pt-4">
+                <button 
+                  onclick="openScheduleModal()"
+                  class="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-navy-700 hover:bg-navy-600 text-offwhite text-xs uppercase font-semibold tracking-wider border border-gold-500/40 hover:border-gold-400 transition-all"
+                >
+                  <i data-lucide="check-square" class="w-4 h-4 text-gold-400"></i>
+                  <span>Agendar Sessão de Estruturação</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Succession 4-Phase Roadmap Card -->
+            <div class="lg:col-span-5">
+              <div class="p-6 rounded-xl bg-navy-850 border border-gold-500/20 space-y-4">
+                <div class="text-xs font-semibold uppercase tracking-wider text-gold-400 mb-2">
+                  Metodologia Sucessória em 4 Etapas
+                </div>
+
+                <div class="space-y-3">
+                  <div class="p-3 rounded-lg bg-navy-800 flex items-center gap-3">
+                    <span class="w-6 h-6 rounded-full bg-gold-500 text-navy-950 font-bold text-xs flex items-center justify-center">1</span>
+                    <div>
+                      <div class="text-xs font-semibold text-offwhite">Mapeamento &amp; Diagnóstico Patrimonial</div>
+                      <div class="text-[11px] text-muted">Levantamento de bens, títulos e passivos</div>
+                    </div>
+                  </div>
+
+                  <div class="p-3 rounded-lg bg-navy-800 flex items-center gap-3">
+                    <span class="w-6 h-6 rounded-full bg-gold-500 text-navy-950 font-bold text-xs flex items-center justify-center">2</span>
+                    <div>
+                      <div class="text-xs font-semibold text-offwhite">Desenho da Arquitetura Societária</div>
+                      <div class="text-[11px] text-muted">Holdings, acordos e mandatos de administração</div>
+                    </div>
+                  </div>
+
+                  <div class="p-3 rounded-lg bg-navy-800 flex items-center gap-3">
+                    <span class="w-6 h-6 rounded-full bg-gold-500 text-navy-950 font-bold text-xs flex items-center justify-center">3</span>
+                    <div>
+                      <div class="text-xs font-semibold text-offwhite">Formalização e Registro Jurídico</div>
+                      <div class="text-[11px] text-muted">Atos notariais com total validade e blindagem</div>
+                    </div>
+                  </div>
+
+                  <div class="p-3 rounded-lg bg-navy-800 flex items-center gap-3">
+                    <span class="w-6 h-6 rounded-full bg-gold-500 text-navy-950 font-bold text-xs flex items-center justify-center">4</span>
+                    <div>
+                      <div class="text-xs font-semibold text-offwhite">Capacitação &amp; Formação dos Herdeiros</div>
+                      <div class="text-[11px] text-muted">Preparação para liderança ética e perene</div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ========================================================================= -->
+  <!-- 5. GOVERNANCE, ETHICS & COMPLIANCE SECTION -->
+  <!-- ========================================================================= -->
+  <section id="governanca" class="py-20 bg-navy-900 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Institutional Banner Container -->
+      <div class="rounded-3xl bg-gradient-to-b from-navy-800 via-navy-850 to-navy-900 p-8 sm:p-14 border border-gold-500/30 shadow-card-luxury relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-96 h-96 bg-gold-500/5 rounded-full blur-3xl pointer-events-none"></div>
+
+        <!-- Section Title & Intro -->
+        <div class="max-w-3xl mb-12">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-navy-750 text-gold-400 text-xs font-semibold uppercase tracking-wider mb-4 border border-gold-500/20">
+            <i data-lucide="shield-check" class="w-3.5 h-3.5"></i>
+            <span>Rigor &amp; Conformidade Institucional</span>
+          </div>
+          <h2 class="font-serif text-3xl sm:text-4xl font-bold text-offwhite mb-4">
+            Governança, Ética e Compliance Inegociáveis
+          </h2>
+          <p class="text-muted text-sm sm:text-base leading-relaxed">
+            Num mercado dinâmico como o de Angola, a reputação e a integridade fiduciária são os maiores ativos de qualquer família. Operamos sob um código rigoroso de conduta com independência irrestrita.
+          </p>
+        </div>
+
+        <!-- 3 Core Compliance Pillars -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 mb-12">
+          
+          <!-- Pillar 1: Dever Fiduciário -->
+          <div class="p-6 rounded-xl bg-navy-900/90 border border-gold-500/20 space-y-3">
+            <div class="w-12 h-12 rounded-lg bg-navy-800 border border-gold-500/30 flex items-center justify-center text-gold-400">
+              <i data-lucide="compass" class="w-6 h-6"></i>
+            </div>
+            <h3 class="font-serif text-lg font-bold text-offwhite">
+              Dever Fiduciário
+            </h3>
+            <p class="text-xs text-muted leading-relaxed">
+              O interesse do cliente está rigorosamente em primeiro lugar. Não recebemos comissões opacas de terceiros nem estruturamos operações que gerem qualquer conflito com o seu legado familiar.
+            </p>
+          </div>
+
+          <!-- Pillar 2: Políticas PLDFT e Gestão de Risco -->
+          <div class="p-6 rounded-xl bg-navy-900/90 border border-gold-500/20 space-y-3">
+            <div class="w-12 h-12 rounded-lg bg-navy-800 border border-gold-500/30 flex items-center justify-center text-gold-400">
+              <i data-lucide="file-check-2" class="w-6 h-6"></i>
+            </div>
+            <h3 class="font-serif text-lg font-bold text-offwhite">
+              Compliance &amp; PLDFT
+            </h3>
+            <p class="text-xs text-muted leading-relaxed">
+              Adoção rigorosa de políticas de Prevenção à Lavagem de Dinheiro e Financiamento do Terrorismo (PLDFT), diligência aprofundada (KYC/KYB) e conformidade integral com os órgãos reguladores de Angola.
+            </p>
+          </div>
+
+          <!-- Pillar 3: Sigilo e Confidencialidade Absoluta -->
+          <div class="p-6 rounded-xl bg-navy-900/90 border border-gold-500/20 space-y-3">
+            <div class="w-12 h-12 rounded-lg bg-navy-800 border border-gold-500/30 flex items-center justify-center text-gold-400">
+              <i data-lucide="key-round" class="w-6 h-6"></i>
+            </div>
+            <h3 class="font-serif text-lg font-bold text-offwhite">
+              Sigilo e Confidencialidade
+            </h3>
+            <p class="text-xs text-muted leading-relaxed">
+              Protocolos de segurança e confidencialidade estrita das informações patrimoniais dos clientes. Todos os dados são protegidos por segredo profissional inabalável e encriptação avançada.
+            </p>
+          </div>
+
+        </div>
+
+        <!-- Executive Commitment Quote Banner -->
+        <div class="p-6 sm:p-8 rounded-2xl bg-navy-950/90 border border-gold-500/30 flex flex-col sm:flex-row items-center gap-6">
+          <div class="w-14 h-14 rounded-full bg-gold-500/10 border border-gold-500/40 text-gold-400 flex items-center justify-center shrink-0">
+            <i data-lucide="quote" class="w-7 h-7"></i>
+          </div>
+          <div class="text-center sm:text-left">
+            <p class="font-serif text-base sm:text-lg italic text-offwhite mb-2">
+              “A longevidade de um património familiar não é medida pelo retorno de um único trimestre, mas pela solidez dos princípios éticos e fiduciários que o sustentam ao longo de gerações.”
+            </p>
+            <span class="text-xs text-gold-400 font-semibold tracking-wider uppercase">
+              Direção Executiva • JCPM-Enterprise-Angola
+            </span>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ========================================================================= -->
+  <!-- 6. CONTACT SECTION & FOOTER -->
+  <!-- ========================================================================= -->
+  <section id="contacto" class="py-20 bg-navy-850 border-t border-navy-800 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+        
+        <!-- Left: Institutional Contact Details Box -->
+        <div class="lg:col-span-5 space-y-8">
+          <div>
+            <div class="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-widest text-gold-400 mb-3">
+              <span class="w-4 h-px bg-gold-500"></span>
+              <span>Atendimento Confidencial</span>
+            </div>
+            <h2 class="font-serif text-3xl sm:text-4xl font-bold text-offwhite mb-4">
+              Agende Uma Sessão com os Nossos Consultores
+            </h2>
+            <p class="text-muted text-sm leading-relaxed">
+              Estamos disponíveis para atendê-lo de forma discreta nas nossas instalações em Luanda ou através de reunião virtual encriptada.
+            </p>
+          </div>
+
+          <!-- Official Details Card -->
+          <div class="p-6 rounded-2xl bg-navy-800 border border-gold-500/25 shadow-card-luxury space-y-5">
+            <div class="border-b border-navy-700 pb-3">
+              <span class="text-xs font-semibold uppercase tracking-widest text-gold-400">Dados Oficiais da Sociedade</span>
+              <h3 class="text-base font-bold text-offwhite mt-1">JCPM-Enterprise-Angola</h3>
+            </div>
+
+            <!-- Phone Numbers -->
+            <div class="flex items-start gap-4">
+              <div class="w-10 h-10 rounded-lg bg-navy-750 text-gold-400 flex items-center justify-center shrink-0 border border-gold-500/20">
+                <i data-lucide="phone" class="w-5 h-5"></i>
+              </div>
+              <div class="space-y-1">
+                <span class="text-xs text-muted block uppercase font-medium">Telefones Diretos:</span>
+                <div class="flex flex-col gap-1">
+                  <a href="tel:+244942783898" class="text-sm font-semibold text-offwhite hover:text-gold-400 transition-colors flex items-center gap-2">
+                    <span>+244 942 783 898</span>
+                    <span class="text-[10px] px-2 py-0.5 rounded bg-gold-500/10 text-gold-400 uppercase">Principal</span>
+                  </a>
+                  <a href="tel:+244945218905" class="text-sm font-semibold text-offwhite hover:text-gold-400 transition-colors flex items-center gap-2">
+                    <span>+244 945 218 905</span>
+                    <span class="text-[10px] px-2 py-0.5 rounded bg-navy-700 text-muted uppercase">Linha 2</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Email -->
+            <div class="flex items-start gap-4">
+              <div class="w-10 h-10 rounded-lg bg-navy-750 text-gold-400 flex items-center justify-center shrink-0 border border-gold-500/20">
+                <i data-lucide="mail" class="w-5 h-5"></i>
+              </div>
+              <div class="space-y-0.5">
+                <span class="text-xs text-muted block uppercase font-medium">Correio Eletrónico:</span>
+                <a href="mailto:jcpm.enterpriseangola@gmail.com" class="text-sm font-semibold text-offwhite hover:text-gold-400 transition-colors break-all block">
+                  jcpm.enterpriseangola@gmail.com
+                </a>
+                <span class="block text-[11px] text-muted">Canal confidencial direto da diretoria</span>
+              </div>
+            </div>
+
+            <!-- Physical Location -->
+            <div class="flex items-start gap-4">
+              <div class="w-10 h-10 rounded-lg bg-navy-750 text-gold-400 flex items-center justify-center shrink-0 border border-gold-500/20">
+                <i data-lucide="map-pin" class="w-5 h-5"></i>
+              </div>
+              <div class="space-y-0.5">
+                <span class="text-xs text-muted block uppercase font-medium">Sede Institucional:</span>
+                <span class="text-sm font-semibold text-offwhite block leading-snug">
+                  Zango 0, Edificio do Kibabo, Piso 02, Área B, Apartamento 05
+                </span>
+                <span class="block text-xs font-medium text-gold-400">Luanda, Angola</span>
+                <span class="block text-[11px] text-muted">Atendimento presencial sob agendamento prévio</span>
+              </div>
+            </div>
+
+            <!-- Business Hours -->
+            <div class="flex items-start gap-4 pt-2 border-t border-navy-700">
+              <div class="w-10 h-10 rounded-lg bg-navy-750 text-gold-400 flex items-center justify-center shrink-0 border border-gold-500/20">
+                <i data-lucide="clock" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <span class="text-xs text-muted block uppercase font-medium">Horário de Funcionamento:</span>
+                <span class="text-sm text-offwhite font-medium">Segunda a Sexta-feira, 08h30 – 17h30 (GMT+1)</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: High-End Contact Form -->
+        <div class="lg:col-span-7">
+          <div class="rounded-2xl bg-navy-800 p-6 sm:p-10 border border-gold-500/25 shadow-card-luxury">
+            <h3 class="font-serif text-2xl font-bold text-offwhite mb-2">
+              Formulário de Contacto Confidencial
+            </h3>
+            <p class="text-xs text-muted mb-6">
+              Preencha os dados abaixo. Um dos nossos diretores séniores entrará em contacto com a máxima discrição.
+            </p>
+
+            <form id="contact-form" onsubmit="handleContactSubmit(event)" class="space-y-4">
+              
+              <!-- Name -->
+              <div>
+                <label for="contact-name" class="block text-xs font-semibold uppercase tracking-wider text-muted mb-1.5">
+                  Nome Completo *
+                </label>
+                <input 
+                  type="text" 
+                  id="contact-name" 
+                  name="name" 
+                  required
+                  placeholder="Ex: Dr. António dos Santos"
+                  class="w-full px-4 py-3 rounded-lg bg-navy-850 border border-navy-700 text-offwhite placeholder:text-muted/60 text-sm focus:outline-none focus:border-gold-500 focus:ring-1 focus:ring-gold-500 transition-colors"
+                />
+              </div>
+
+              <!-- Phone & Email (2 columns) -->
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label for="contact-phone" class="block text-xs font-semibold uppercase tracking-wider text-muted mb-1.5">
+                    Telefone / WhatsApp *
+                  </label>
+                  <input 
+                    type="tel" 
+                    id="contact-phone" 
+                    name="phone" 
+                    required
+                    placeholder="+244 9..."
+                    class="w-full px-4 py-3 rounded-lg bg-navy-850 border border-navy-700 text-offwhite placeholder:text-muted/60 text-sm focus:outline-none focus:border-gold-500 focus:ring-1 focus:ring-gold-500 transition-colors"
+                  />
+                </div>
+                <div>
+                  <label for="contact-email" class="block text-xs font-semibold uppercase tracking-wider text-muted mb-1.5">
+                    Correio Eletrónico *
+                  </label>
+                  <input 
+                    type="email" 
+                    id="contact-email" 
+                    name="email" 
+                    required
+                    placeholder="diretoria@empresa.ao"
+                    class="w-full px-4 py-3 rounded-lg bg-navy-850 border border-navy-700 text-offwhite placeholder:text-muted/60 text-sm focus:outline-none focus:border-gold-500 focus:ring-1 focus:ring-gold-500 transition-colors"
+                  />
+                </div>
+              </div>
+
+              <!-- Subject Selection -->
+              <div>
+                <label for="contact-subject" class="block text-xs font-semibold uppercase tracking-wider text-muted mb-1.5">
+                  Assunto de Interesse *
+                </label>
+                <select 
+                  id="contact-subject" 
+                  name="subject" 
+                  required
+                  class="w-full px-4 py-3 rounded-lg bg-navy-850 border border-navy-700 text-offwhite text-sm focus:outline-none focus:border-gold-500 focus:ring-1 focus:ring-gold-500 transition-colors"
+                >
+                  <option value="" disabled selected>Selecione a área fiduciária pretendida...</option>
+                  <option value="asset-management">Asset Management (Gestão de Carteiras e Fundos)</option>
+                  <option value="wealth-family-office">Wealth Management &amp; Family Office</option>
+                  <option value="planeamento-sucessorio">Planeamento Sucessório &amp; Estruturação de Holdings</option>
+                  <option value="governanca">Governança Familiar e Protocolos</option>
+                  <option value="outro">Outro Assunto Institucional</option>
+                </select>
+              </div>
+
+              <!-- Message -->
+              <div>
+                <label for="contact-message" class="block text-xs font-semibold uppercase tracking-wider text-muted mb-1.5">
+                  Mensagem / Detalhes Preliminares
+                </label>
+                <textarea 
+                  id="contact-message" 
+                  name="message" 
+                  rows="4" 
+                  placeholder="Descreva de forma geral a natureza do seu património e os objetivos da consulta..."
+                  class="w-full px-4 py-3 rounded-lg bg-navy-850 border border-navy-700 text-offwhite placeholder:text-muted/60 text-sm focus:outline-none focus:border-gold-500 focus:ring-1 focus:ring-gold-500 transition-colors resize-none"
+                ></textarea>
+              </div>
+
+              <!-- Security notice -->
+              <div class="flex items-center gap-2 text-[11px] text-muted py-1">
+                <i data-lucide="lock" class="w-3.5 h-3.5 text-gold-500 shrink-0"></i>
+                <span>Os dados submetidos são tratados sob rigoroso segredo profissional e fiduciário.</span>
+              </div>
+
+              <!-- Submit Button -->
+              <button 
+                type="submit"
+                id="contact-submit-btn"
+                class="w-full py-3.5 px-6 rounded-lg bg-gradient-to-r from-gold-500 via-gold-400 to-gold-600 text-navy-950 font-bold text-xs uppercase tracking-wider shadow-gold-sm hover:shadow-gold-glow hover:brightness-105 active:scale-[0.99] transition-all flex items-center justify-center gap-2"
+              >
+                <i data-lucide="send" class="w-4 h-4"></i>
+                <span>Enviar Mensagem Confidencial</span>
+              </button>
+
+              <!-- Success Alert (Hidden by default) -->
+              <div id="contact-success" class="hidden p-4 rounded-lg bg-navy-750 border border-gold-500/50 text-gold-400 flex items-start gap-3">
+                <i data-lucide="check-circle" class="w-5 h-5 shrink-0 mt-0.5"></i>
+                <div>
+                  <h4 class="font-semibold text-sm text-offwhite">Solicitação Recebida com Sucesso</h4>
+                  <p class="text-xs text-muted mt-0.5">Agradecemos o seu contacto. A nossa diretoria analisará as informações sob estrito sigilo e retornará em breve.</p>
+                </div>
+              </div>
+
+            </form>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ========================================================================= -->
+  <!-- FOOTER -->
+  <!-- ========================================================================= -->
+  <footer class="bg-navy-950 text-muted border-t border-navy-800 text-xs py-14">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-12">
+        
+        <!-- Brand Summary (2 cols) -->
+        <div class="lg:col-span-2 space-y-4">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-lg overflow-hidden border border-gold-500/40 p-0.5 bg-navy-950 flex items-center justify-center shrink-0">
+              <img src="/logo.svg" alt="JCPM Enterprise Angola Logo" class="w-full h-full object-cover" />
+            </div>
+            <div>
+              <span class="font-sans font-bold tracking-[0.14em] text-sm text-offwhite uppercase block">
+                JCPM-ENTERPRISE
+              </span>
+              <span class="font-sans text-[9px] tracking-[0.2em] font-semibold text-gold-500 uppercase block">
+                ANGOLA
+              </span>
+            </div>
+          </div>
+          <p class="text-muted leading-relaxed text-xs max-w-sm">
+            Sociedade gestora e fiduciária de ativos e patrimónios soberanos sediada em Luanda. Compromisso com a preservação de capital multigeracional, excelência ética e discrição inabalável.
+          </p>
+          <div class="text-[11px] text-muted space-y-1">
+            <div><span class="text-offwhite font-medium">Sede:</span> Zango 0, Edificio do Kibabo, Piso 02, Área B, Apartamento 05</div>
+            <div><span class="text-offwhite font-medium">Jurisdição:</span> Luanda, República de Angola</div>
+          </div>
+        </div>
+
+        <!-- Links Column 1: Navegação -->
+        <div>
+          <h4 class="text-xs font-semibold text-offwhite uppercase tracking-wider mb-3">Navegação</h4>
+          <ul class="space-y-2">
+            <li><a href="#inicio" class="hover:text-gold-400 transition-colors">Início</a></li>
+            <li><a href="#sobre" class="hover:text-gold-400 transition-colors">Sobre Nós</a></li>
+            <li><a href="#desafio" class="hover:text-gold-400 transition-colors">O Desafio</a></li>
+            <li><a href="#servicos" class="hover:text-gold-400 transition-colors">Serviços Fiduciários</a></li>
+            <li><a href="#governanca" class="hover:text-gold-400 transition-colors">Governança &amp; Compliance</a></li>
+            <li><a href="#contacto" class="hover:text-gold-400 transition-colors">Contactos Diretos</a></li>
+          </ul>
+        </div>
+
+        <!-- Links Column 2: Serviços -->
+        <div>
+          <h4 class="text-xs font-semibold text-offwhite uppercase tracking-wider mb-3">Capacidades</h4>
+          <ul class="space-y-2">
+            <li><a href="#servicos" onclick="switchTab(0)" class="hover:text-gold-400 transition-colors">Asset Management</a></li>
+            <li><a href="#servicos" onclick="switchTab(1)" class="hover:text-gold-400 transition-colors">Wealth Management</a></li>
+            <li><a href="#servicos" onclick="switchTab(1)" class="hover:text-gold-400 transition-colors">Multi-Family Office</a></li>
+            <li><a href="#servicos" onclick="switchTab(2)" class="hover:text-gold-400 transition-colors">Planeamento Sucessório</a></li>
+            <li><a href="#servicos" onclick="switchTab(2)" class="hover:text-gold-400 transition-colors">Holdings Familiares</a></li>
+          </ul>
+        </div>
+
+        <!-- Links Column 3: Contactos Rápidos -->
+        <div>
+          <h4 class="text-xs font-semibold text-offwhite uppercase tracking-wider mb-3">Contactos Oficiais</h4>
+          <ul class="space-y-2.5 text-xs">
+            <li class="flex items-center gap-2">
+              <i data-lucide="mail" class="w-3.5 h-3.5 text-gold-500 shrink-0"></i>
+              <a href="mailto:jcpm.enterpriseangola@gmail.com" class="hover:text-gold-400 transition-colors break-all text-[11px]">jcpm.enterpriseangola@gmail.com</a>
+            </li>
+            <li class="flex items-center gap-2">
+              <i data-lucide="phone" class="w-3.5 h-3.5 text-gold-500 shrink-0"></i>
+              <a href="tel:+244942783898" class="hover:text-gold-400 transition-colors">+244 942 783 898</a>
+            </li>
+            <li class="flex items-center gap-2">
+              <i data-lucide="phone" class="w-3.5 h-3.5 text-gold-500 shrink-0"></i>
+              <a href="tel:+244945218905" class="hover:text-gold-400 transition-colors">+244 945 218 905</a>
+            </li>
+            <li class="flex items-start gap-2">
+              <i data-lucide="map-pin" class="w-3.5 h-3.5 text-gold-500 shrink-0 mt-0.5"></i>
+              <span class="text-[11px] leading-tight">Zango 0, Edificio do Kibabo, Piso 02, Área B, Ap. 05, Luanda</span>
+            </li>
+            <li class="pt-1">
+              <button 
+                onclick="openScheduleModal()"
+                class="px-3 py-1.5 rounded bg-navy-800 text-gold-400 border border-gold-500/30 text-[11px] font-semibold hover:bg-navy-750 transition-colors"
+              >
+                Agendar Sessão Privada
+              </button>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Legal Disclaimer & Copyright -->
+      <div class="pt-8 border-t border-navy-850 flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px]">
+        <div class="text-muted text-center sm:text-left">
+          &copy; 2026 JCPM-Enterprise-Angola. Todos os direitos reservados.
+        </div>
+        <div class="flex flex-wrap items-center gap-6">
+          <a href="#" class="hover:text-gold-400 transition-colors">Política de Privacidade</a>
+          <a href="#" class="hover:text-gold-400 transition-colors">Termos de Serviço</a>
+          <a href="#governanca" class="hover:text-gold-400 transition-colors">Declaração de Compliance</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+
+  <!-- ========================================================================= -->
+  <!-- MODAL: AGENDAR SESSÃO ESTRATÉGICA -->
+  <!-- ========================================================================= -->
+  <div 
+    id="schedule-modal" 
+    class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 sm:p-6 bg-navy-950/80 backdrop-blur-md transition-opacity duration-300"
+    role="dialog" 
+    aria-modal="true" 
+    aria-labelledby="modal-title"
+  >
+    <!-- Modal Dialog Box -->
+    <div 
+      id="modal-box"
+      class="w-full max-w-lg rounded-2xl bg-navy-900 border border-gold-500/40 p-6 sm:p-8 shadow-card-luxury relative max-h-[90vh] overflow-y-auto transform scale-95 transition-transform duration-300"
+      onclick="event.stopPropagation()"
+    >
+      <!-- Close Button -->
+      <button 
+        type="button" 
+        onclick="closeScheduleModal()" 
+        aria-label="Fechar Modal"
+        class="absolute top-5 right-5 p-2 rounded-lg text-muted hover:text-offwhite hover:bg-navy-800 transition-colors"
+      >
+        <i data-lucide="x" class="w-5 h-5"></i>
+      </button>
+
+      <!-- Modal Header -->
+      <div class="mb-6">
+        <div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded bg-navy-800 text-gold-400 text-[11px] font-semibold uppercase tracking-wider mb-2 border border-gold-500/20">
+          <i data-lucide="calendar" class="w-3.5 h-3.5"></i>
+          <span>Atendimento Sob Reserva</span>
+        </div>
+        <h3 id="modal-title" class="font-serif text-2xl font-bold text-offwhite">
+          Agendar Sessão Estratégica
+        </h3>
+        <p class="text-xs text-muted mt-1">
+          Reunião privada de consulta fiduciária e diagnóstico patrimonial com a nossa diretoria.
+        </p>
+      </div>
+
+      <!-- Modal Form -->
+      <form id="modal-form" onsubmit="handleModalSubmit(event)" class="space-y-4">
+        
+        <!-- Full Name -->
+        <div>
+          <label for="modal-name" class="block text-xs font-semibold uppercase tracking-wider text-muted mb-1">
+            Nome Completo *
+          </label>
+          <input 
+            type="text" 
+            id="modal-name" 
+            required 
+            placeholder="Ex: Dra. Maria Isabel Costa"
+            class="w-full px-3.5 py-2.5 rounded-lg bg-navy-850 border border-navy-700 text-offwhite text-sm placeholder:text-muted/60 focus:outline-none focus:border-gold-500"
+          />
+        </div>
+
+        <!-- Phone & Email -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <div>
+            <label for="modal-phone" class="block text-xs font-semibold uppercase tracking-wider text-muted mb-1">
+              Telefone / WhatsApp *
+            </label>
+            <input 
+              type="tel" 
+              id="modal-phone" 
+              required 
+              placeholder="+244 9..."
+              class="w-full px-3.5 py-2.5 rounded-lg bg-navy-850 border border-navy-700 text-offwhite text-sm placeholder:text-muted/60 focus:outline-none focus:border-gold-500"
+            />
+          </div>
+          <div>
+            <label for="modal-email" class="block text-xs font-semibold uppercase tracking-wider text-muted mb-1">
+              Correio Eletrónico *
+            </label>
+            <input 
+              type="email" 
+              id="modal-email" 
+              required 
+              placeholder="seu.email@dominio.ao"
+              class="w-full px-3.5 py-2.5 rounded-lg bg-navy-850 border border-navy-700 text-offwhite text-sm placeholder:text-muted/60 focus:outline-none focus:border-gold-500"
+            />
+          </div>
+        </div>
+
+        <!-- Service Required -->
+        <div>
+          <label for="modal-service" class="block text-xs font-semibold uppercase tracking-wider text-muted mb-1">
+            Área de Foco Principal *
+          </label>
+          <select 
+            id="modal-service" 
+            required 
+            class="w-full px-3.5 py-2.5 rounded-lg bg-navy-850 border border-navy-700 text-offwhite text-sm focus:outline-none focus:border-gold-500"
+          >
+            <option value="" disabled selected>Selecione a área de consultoria...</option>
+            <option value="asset">Asset Management (Gestão de Carteiras &amp; Fundos)</option>
+            <option value="wealth">Wealth Management &amp; Family Office</option>
+            <option value="sucessao">Planeamento Sucessório &amp; Holdings</option>
+            <option value="diagnostico">Diagnóstico Patrimonial Global</option>
+          </select>
+        </div>
+
+        <!-- Meeting Mode & Date -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <div>
+            <label for="modal-mode" class="block text-xs font-semibold uppercase tracking-wider text-muted mb-1">
+              Modalidade de Sessão *
+            </label>
+            <select 
+              id="modal-mode" 
+              required 
+              class="w-full px-3.5 py-2.5 rounded-lg bg-navy-850 border border-navy-700 text-offwhite text-sm focus:outline-none focus:border-gold-500"
+            >
+              <option value="presencial">Presencial (Luanda)</option>
+              <option value="videoconferencia">Videoconferência Segura</option>
+            </select>
+          </div>
+          <div>
+            <label for="modal-date" class="block text-xs font-semibold uppercase tracking-wider text-muted mb-1">
+              Data Preferencial
+            </label>
+            <input 
+              type="date" 
+              id="modal-date" 
+              class="w-full px-3.5 py-2.5 rounded-lg bg-navy-850 border border-navy-700 text-offwhite text-sm focus:outline-none focus:border-gold-500"
+            />
+          </div>
+        </div>
+
+        <!-- Additional Notes -->
+        <div>
+          <label for="modal-notes" class="block text-xs font-semibold uppercase tracking-wider text-muted mb-1">
+            Notas Confidenciais (Opcional)
+          </label>
+          <textarea 
+            id="modal-notes" 
+            rows="2" 
+            placeholder="Informações adicionais para preparação da sessão..."
+            class="w-full px-3.5 py-2 rounded-lg bg-navy-850 border border-navy-700 text-offwhite text-sm placeholder:text-muted/60 focus:outline-none focus:border-gold-500 resize-none"
+          ></textarea>
+        </div>
+
+        <!-- Security Badge -->
+        <div class="flex items-center gap-2 text-[11px] text-muted">
+          <i data-lucide="shield-check" class="w-3.5 h-3.5 text-gold-500"></i>
+          <span>Proteção sob estrita confidencialidade fiduciária e institucional.</span>
+        </div>
+
+        <!-- Action Button -->
+        <div class="pt-2">
+          <button 
+            type="submit" 
+            class="w-full py-3.5 rounded-lg bg-gradient-to-r from-gold-500 via-gold-400 to-gold-600 text-navy-950 font-bold text-xs uppercase tracking-wider shadow-gold-sm hover:shadow-gold-glow hover:brightness-105 active:scale-[0.99] transition-all flex items-center justify-center gap-2"
+          >
+            <i data-lucide="check" class="w-4 h-4"></i>
+            <span>Confirmar Pedido de Sessão</span>
+          </button>
+        </div>
+
+        <!-- Modal Success Screen (Hidden by default) -->
+        <div id="modal-success" class="hidden p-4 rounded-lg bg-navy-800 border border-gold-500 text-center space-y-2">
+          <div class="w-10 h-10 rounded-full bg-gold-500/20 text-gold-400 mx-auto flex items-center justify-center">
+            <i data-lucide="check-circle" class="w-5 h-5"></i>
+          </div>
+          <h4 class="font-serif font-bold text-base text-offwhite">Sessão Solicitada com Sucesso</h4>
+          <p class="text-xs text-muted">
+            Recebemos o seu pedido. A nossa assessoria entrará em contacto confidencialmente para validar a hora e a agenda da sessão.
+          </p>
+          <button 
+            type="button" 
+            onclick="closeScheduleModal()" 
+            class="mt-2 text-xs font-semibold text-gold-400 hover:underline"
+          >
+            Concluir e Fechar
+          </button>
+        </div>
+
+      </form>
+    </div>
+  </div>
+
+
+  <!-- ========================================================================= -->
+  <!-- JAVASCRIPT LOGIC (Tabs, Modals, Mobile Menu, Lucide Icons) -->
+  <!-- ========================================================================= -->
+  <script>
+    // 1. Initialize Lucide Icons
+    document.addEventListener('DOMContentLoaded', function() {
+      if (window.lucide) {
+        window.lucide.createIcons();
+      }
+    });
+
+    // Re-initialize icons whenever dynamic changes occur
+    function refreshIcons() {
+      if (window.lucide) {
+        window.lucide.createIcons();
+      }
+    }
+
+    // 2. Mobile Menu Toggle Logic
+    const mobileMenu = document.getElementById('mobile-menu');
+    const menuBars = document.getElementById('menu-icon-bars');
+    const menuClose = document.getElementById('menu-icon-close');
+
+    function toggleMobileMenu() {
+      const isHidden = mobileMenu.classList.contains('hidden');
+      if (isHidden) {
+        mobileMenu.classList.remove('hidden');
+        if (menuBars && menuClose) {
+          menuBars.classList.add('hidden');
+          menuClose.classList.remove('hidden');
+        }
+      } else {
+        closeMobileMenu();
+      }
+      refreshIcons();
+    }
+
+    function closeMobileMenu() {
+      if (mobileMenu) {
+        mobileMenu.classList.add('hidden');
+      }
+      if (menuBars && menuClose) {
+        menuBars.classList.remove('hidden');
+        menuClose.classList.add('hidden');
+      }
+      refreshIcons();
+    }
+
+    // 3. Tab Switching Logic for Services Section
+    function switchTab(tabIndex) {
+      const panels = [
+        document.getElementById('tab-content-0'),
+        document.getElementById('tab-content-1'),
+        document.getElementById('tab-content-2')
+      ];
+
+      const buttons = [
+        document.getElementById('tab-btn-0'),
+        document.getElementById('tab-btn-1'),
+        document.getElementById('tab-btn-2')
+      ];
+
+      // Update Panels
+      panels.forEach((panel, idx) => {
+        if (!panel) return;
+        if (idx === tabIndex) {
+          panel.classList.remove('hidden');
+          panel.classList.add('block');
+        } else {
+          panel.classList.remove('block');
+          panel.classList.add('hidden');
+        }
+      });
+
+      // Update Button Styles
+      buttons.forEach((btn, idx) => {
+        if (!btn) return;
+        if (idx === tabIndex) {
+          btn.setAttribute('aria-selected', 'true');
+          btn.className = "flex-1 min-w-[200px] py-3 px-4 rounded-lg text-xs sm:text-sm font-semibold uppercase tracking-wider transition-all duration-200 flex items-center justify-center gap-2 bg-gradient-to-r from-gold-500 to-gold-600 text-navy-950 shadow-gold-sm";
+        } else {
+          btn.setAttribute('aria-selected', 'false');
+          btn.className = "flex-1 min-w-[200px] py-3 px-4 rounded-lg text-xs sm:text-sm font-semibold uppercase tracking-wider transition-all duration-200 flex items-center justify-center gap-2 text-muted hover:text-offwhite hover:bg-navy-800";
+        }
+      });
+
+      refreshIcons();
+    }
+
+    // 4. Modal Open/Close Logic
+    const scheduleModal = document.getElementById('schedule-modal');
+    const modalBox = document.getElementById('modal-box');
+
+    function openScheduleModal() {
+      if (scheduleModal) {
+        scheduleModal.classList.remove('hidden');
+        document.body.classList.add('overflow-hidden');
+        // Reset form and success state on open
+        const form = document.getElementById('modal-form');
+        const success = document.getElementById('modal-success');
+        if (form && success) {
+          success.classList.add('hidden');
+        }
+        setTimeout(() => {
+          if (modalBox) {
+            modalBox.classList.remove('scale-95');
+            modalBox.classList.add('scale-100');
+          }
+        }, 10);
+      }
+      refreshIcons();
+    }
+
+    function closeScheduleModal() {
+      if (scheduleModal) {
+        if (modalBox) {
+          modalBox.classList.remove('scale-100');
+          modalBox.classList.add('scale-95');
+        }
+        setTimeout(() => {
+          scheduleModal.classList.add('hidden');
+          document.body.classList.remove('overflow-hidden');
+        }, 150);
+      }
+    }
+
+    // Close modal when clicking outside modal box
+    if (scheduleModal) {
+      scheduleModal.addEventListener('click', function(e) {
+        if (e.target === scheduleModal) {
+          closeScheduleModal();
+        }
+      });
+    }
+
+    // Close on Escape key press
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') {
+        closeScheduleModal();
+        closeMobileMenu();
+      }
+    });
+
+    // 5. Contact Form Submission Handler
+    function handleContactSubmit(event) {
+      event.preventDefault();
+      const submitBtn = document.getElementById('contact-submit-btn');
+      const successBanner = document.getElementById('contact-success');
+      
+      if (submitBtn) {
+        submitBtn.disabled = true;
+        submitBtn.innerHTML = '<i data-lucide="loader-2" class="w-4 h-4 animate-spin"></i><span>A Enviar Informação...</span>';
+        refreshIcons();
+      }
+
+      setTimeout(() => {
+        if (submitBtn) {
+          submitBtn.disabled = false;
+          submitBtn.innerHTML = '<i data-lucide="send" class="w-4 h-4"></i><span>Enviar Mensagem Confidencial</span>';
+        }
+        if (successBanner) {
+          successBanner.classList.remove('hidden');
+        }
+        event.target.reset();
+        refreshIcons();
+      }, 800);
+    }
+
+    // 6. Modal Form Submission Handler
+    function handleModalSubmit(event) {
+      event.preventDefault();
+      const form = document.getElementById('modal-form');
+      const success = document.getElementById('modal-success');
+      
+      const submitBtn = form.querySelector('button[type="submit"]');
+      if (submitBtn) {
+        submitBtn.disabled = true;
+        submitBtn.innerHTML = '<i data-lucide="loader-2" class="w-4 h-4 animate-spin"></i><span>A Registar Pedido...</span>';
+        refreshIcons();
+      }
+
+      setTimeout(() => {
+        if (submitBtn) {
+          submitBtn.disabled = false;
+          submitBtn.innerHTML = '<i data-lucide="check" class="w-4 h-4"></i><span>Confirmar Pedido de Sessão</span>';
+        }
+        if (success) {
+          success.classList.remove('hidden');
+          success.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }
+        refreshIcons();
+      }, 700);
+    }
+  </script>
+
+</body>
+</html>
+
+
